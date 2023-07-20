@@ -1,0 +1,1512 @@
+{
+	"info": {
+		"_postman_id": "e983168c-25a5-4bc0-88e9-e2bb14c97568",
+		"name": "fic06-be-haziq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Huzi\",\n    \"password\": \"123456\",\n    \"email\": \"haziq@gmail.com\",\n    \"username\": \"huzi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/local/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Huzi\",\n    \"password\": \"123456\",\n    \"email\": \"haziq@gmail.com\",\n    \"username\": \"huzi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689357617"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "337"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 17:59:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5MzU3NTU2LCJleHAiOjE2OTE5NDk1NTZ9.egGXUUvlb3bbih2B_vT62w7YGt5UObgt93BT6CbWPnI\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"huzi\",\n        \"email\": \"haziq@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-14T17:59:16.551Z\",\n        \"updatedAt\": \"2023-07-14T17:59:16.551Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"identifier\": \"haziq@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/local",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier\": \"haziq@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689357966"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "337"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:05:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5MzU3OTA1LCJleHAiOjE2OTE5NDk5MDV9.roL_k2UHn14VN5lLZXsqF4qR84l0-NwrGY15HHYIk44\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"huzi\",\n        \"email\": \"haziq@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-14T17:59:16.551Z\",\n        \"updatedAt\": \"2023-07-14T17:59:16.551Z\"\n    }\n}"
+				},
+				{
+					"name": "400 error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier\": \"haziq@gmail.comasdsdada\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689358064"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:06:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 400,\n        \"name\": \"ValidationError\",\n        \"message\": \"Invalid identifier or password\",\n        \"details\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "386"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:21:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"name\": \"jam H\",\n                \"description\": \"jam limited edition yang menggambarkan kehangatan\",\n                \"quantity\": 5,\n                \"price\": 5000,\n                \"inStock\": true,\n                \"image\": \"jamH.jpg\",\n                \"distributor\": \"Huzi\",\n                \"createdAt\": \"2023-07-14T18:21:28.610Z\",\n                \"updatedAt\": \"2023-07-14T18:21:29.749Z\",\n                \"publishedAt\": \"2023-07-14T18:21:29.744Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api get product  by  id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "323"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:24:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"jam H\",\n            \"description\": \"jam limited edition yang menggambarkan kehangatan\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"inStock\": true,\n            \"image\": \"jamH.jpg\",\n            \"distributor\": \"Huzi\",\n            \"createdAt\": \"2023-07-14T18:21:28.610Z\",\n            \"updatedAt\": \"2023-07-14T18:21:29.749Z\",\n            \"publishedAt\": \"2023-07-14T18:21:29.744Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api create product ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5MzU5NjIxLCJleHAiOjE2OTE5NTE2MjF9.Vm1g97t-zEKvMDkU2soUoAFAQsVBFBx7qF2UW71G1a4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"data\": {\n\n            \"name\": \"sepatu\",\n            \"description\": \"sepatu unik\",\n            \"quantity\": 10,\n            \"price\": 15000,\n            \"inStock\": true,\n            \"image\": \"sepatu.jpg\",\n            \"distributor\": \"Huzi\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5MzU5NjIxLCJleHAiOjE2OTE5NTE2MjF9.Vm1g97t-zEKvMDkU2soUoAFAQsVBFBx7qF2UW71G1a4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"data\": {\n\n            \"name\": \"sepatu\",\n            \"description\": \"sepatu unik\",\n            \"quantity\": 10,\n            \"price\": 15000,\n            \"inStock\": true,\n            \"image\": \"sepatu.jpg\",\n            \"distributor\": \"Huzi\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:40:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"sepatu\",\n            \"description\": \"sepatu unik\",\n            \"quantity\": 10,\n            \"price\": 15000,\n            \"inStock\": true,\n            \"image\": \"sepatu.jpg\",\n            \"distributor\": \"Huzi\",\n            \"createdAt\": \"2023-07-14T18:21:28.610Z\",\n            \"updatedAt\": \"2023-07-14T18:40:26.633Z\",\n            \"publishedAt\": \"2023-07-14T18:21:29.744Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api update  product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5MzU5NjIxLCJleHAiOjE2OTE5NTE2MjF9.Vm1g97t-zEKvMDkU2soUoAFAQsVBFBx7qF2UW71G1a4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"data\": {\n\n            \"name\": \"sepatu H\",\n            \"description\": \"sepatu unik\",\n            \"quantity\": 10,\n            \"price\": 15000,\n            \"inStock\": true,\n            \"image\": \"sepaturevisi.jpg\",\n            \"distributor\": \"Huzi\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5MzU5NjIxLCJleHAiOjE2OTE5NTE2MjF9.Vm1g97t-zEKvMDkU2soUoAFAQsVBFBx7qF2UW71G1a4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"data\": {\n\n            \"name\": \"sepatu H\",\n            \"description\": \"sepatu unik\",\n            \"quantity\": 10,\n            \"price\": 15000,\n            \"inStock\": true,\n            \"image\": \"sepaturevisi.jpg\",\n            \"distributor\": \"Huzi\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "298"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:43:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"sepatu H\",\n            \"description\": \"sepatu unik\",\n            \"quantity\": 10,\n            \"price\": 15000,\n            \"inStock\": true,\n            \"image\": \"sepaturevisi.jpg\",\n            \"distributor\": \"Huzi\",\n            \"createdAt\": \"2023-07-14T18:21:28.610Z\",\n            \"updatedAt\": \"2023-07-14T18:43:54.090Z\",\n            \"publishedAt\": \"2023-07-14T18:21:29.744Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "298"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:51:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"sepatu H\",\n            \"description\": \"sepatu unik\",\n            \"quantity\": 10,\n            \"price\": 15000,\n            \"inStock\": true,\n            \"image\": \"sepaturevisi.jpg\",\n            \"distributor\": \"Huzi\",\n            \"createdAt\": \"2023-07-14T18:21:28.610Z\",\n            \"updatedAt\": \"2023-07-14T18:50:25.796Z\",\n            \"publishedAt\": \"2023-07-14T18:21:29.744Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api upload images",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/jsmdika/Desktop/Huzi/SS an/Screenshot 2023-07-12 at 22.38.37.png"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/jsmdika/Desktop/Huzi/SS an/Screenshot 2023-07-11 at 00.20.06.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/Users/jsmdika/Desktop/Huzi/SS an/Screenshot 2023-07-12 at 22.38.37.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1564"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 18:57:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Screenshot 2023-07-12 at 22.38.37.png\",\n        \"alternativeText\": null,\n        \"caption\": null,\n        \"width\": 2880,\n        \"height\": 1800,\n        \"formats\": {\n            \"thumbnail\": {\n                \"name\": \"thumbnail_Screenshot 2023-07-12 at 22.38.37.png\",\n                \"hash\": \"thumbnail_Screenshot_2023_07_12_at_22_38_37_4485c994a5\",\n                \"ext\": \".png\",\n                \"mime\": \"image/png\",\n                \"path\": null,\n                \"width\": 245,\n                \"height\": 153,\n                \"size\": 9.46,\n                \"url\": \"/uploads/thumbnail_Screenshot_2023_07_12_at_22_38_37_4485c994a5.png\"\n            },\n            \"medium\": {\n                \"name\": \"medium_Screenshot 2023-07-12 at 22.38.37.png\",\n                \"hash\": \"medium_Screenshot_2023_07_12_at_22_38_37_4485c994a5\",\n                \"ext\": \".png\",\n                \"mime\": \"image/png\",\n                \"path\": null,\n                \"width\": 750,\n                \"height\": 469,\n                \"size\": 56.05,\n                \"url\": \"/uploads/medium_Screenshot_2023_07_12_at_22_38_37_4485c994a5.png\"\n            },\n            \"small\": {\n                \"name\": \"small_Screenshot 2023-07-12 at 22.38.37.png\",\n                \"hash\": \"small_Screenshot_2023_07_12_at_22_38_37_4485c994a5\",\n                \"ext\": \".png\",\n                \"mime\": \"image/png\",\n                \"path\": null,\n                \"width\": 500,\n                \"height\": 313,\n                \"size\": 30,\n                \"url\": \"/uploads/small_Screenshot_2023_07_12_at_22_38_37_4485c994a5.png\"\n            },\n            \"large\": {\n                \"name\": \"large_Screenshot 2023-07-12 at 22.38.37.png\",\n                \"hash\": \"large_Screenshot_2023_07_12_at_22_38_37_4485c994a5\",\n                \"ext\": \".png\",\n                \"mime\": \"image/png\",\n                \"path\": null,\n                \"width\": 1000,\n                \"height\": 625,\n                \"size\": 91.5,\n                \"url\": \"/uploads/large_Screenshot_2023_07_12_at_22_38_37_4485c994a5.png\"\n            }\n        },\n        \"hash\": \"Screenshot_2023_07_12_at_22_38_37_4485c994a5\",\n        \"ext\": \".png\",\n        \"mime\": \"image/png\",\n        \"size\": 106.46,\n        \"url\": \"/uploads/Screenshot_2023_07_12_at_22_38_37_4485c994a5.png\",\n        \"previewUrl\": null,\n        \"provider\": \"local\",\n        \"provider_metadata\": null,\n        \"createdAt\": \"2023-07-14T18:57:37.924Z\",\n        \"updatedAt\": \"2023-07-14T18:57:37.924Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api get Products with images",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products?populate=*",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products?populate=*",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3640"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jul 2023 19:13:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"attributes\": {\n                \"name\": \"jam H\",\n                \"description\": \"jam limited edition yang menggambarkan kehangatan\",\n                \"quantity\": 5,\n                \"price\": 5000,\n                \"inStock\": true,\n                \"image\": \"http://localhost:1337/uploads/Screenshot_2023_07_12_at_22_38_37_4485c994a5.png\",\n                \"distributor\": \"Huzi\",\n                \"createdAt\": \"2023-07-14T18:37:47.405Z\",\n                \"updatedAt\": \"2023-07-14T19:13:49.539Z\",\n                \"publishedAt\": \"2023-07-14T18:37:47.403Z\",\n                \"images\": {\n                    \"data\": [\n                        {\n                            \"id\": 2,\n                            \"attributes\": {\n                                \"name\": \"Screenshot 2023-07-12 at 22.38.37.png\",\n                                \"alternativeText\": null,\n                                \"caption\": null,\n                                \"width\": 2880,\n                                \"height\": 1800,\n                                \"formats\": {\n                                    \"thumbnail\": {\n                                        \"name\": \"thumbnail_Screenshot 2023-07-12 at 22.38.37.png\",\n                                        \"hash\": \"thumbnail_Screenshot_2023_07_12_at_22_38_37_6e73767b2e\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 245,\n                                        \"height\": 153,\n                                        \"size\": 9.46,\n                                        \"url\": \"/uploads/thumbnail_Screenshot_2023_07_12_at_22_38_37_6e73767b2e.png\"\n                                    },\n                                    \"medium\": {\n                                        \"name\": \"medium_Screenshot 2023-07-12 at 22.38.37.png\",\n                                        \"hash\": \"medium_Screenshot_2023_07_12_at_22_38_37_6e73767b2e\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 750,\n                                        \"height\": 469,\n                                        \"size\": 56.05,\n                                        \"url\": \"/uploads/medium_Screenshot_2023_07_12_at_22_38_37_6e73767b2e.png\"\n                                    },\n                                    \"small\": {\n                                        \"name\": \"small_Screenshot 2023-07-12 at 22.38.37.png\",\n                                        \"hash\": \"small_Screenshot_2023_07_12_at_22_38_37_6e73767b2e\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 500,\n                                        \"height\": 313,\n                                        \"size\": 30,\n                                        \"url\": \"/uploads/small_Screenshot_2023_07_12_at_22_38_37_6e73767b2e.png\"\n                                    },\n                                    \"large\": {\n                                        \"name\": \"large_Screenshot 2023-07-12 at 22.38.37.png\",\n                                        \"hash\": \"large_Screenshot_2023_07_12_at_22_38_37_6e73767b2e\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 1000,\n                                        \"height\": 625,\n                                        \"size\": 91.5,\n                                        \"url\": \"/uploads/large_Screenshot_2023_07_12_at_22_38_37_6e73767b2e.png\"\n                                    }\n                                },\n                                \"hash\": \"Screenshot_2023_07_12_at_22_38_37_6e73767b2e\",\n                                \"ext\": \".png\",\n                                \"mime\": \"image/png\",\n                                \"size\": 106.46,\n                                \"url\": \"/uploads/Screenshot_2023_07_12_at_22_38_37_6e73767b2e.png\",\n                                \"previewUrl\": null,\n                                \"provider\": \"local\",\n                                \"provider_metadata\": null,\n                                \"createdAt\": \"2023-07-14T19:10:45.544Z\",\n                                \"updatedAt\": \"2023-07-14T19:10:45.544Z\"\n                            }\n                        },\n                        {\n                            \"id\": 3,\n                            \"attributes\": {\n                                \"name\": \"Screenshot 2023-07-11 at 00.20.06.png\",\n                                \"alternativeText\": null,\n                                \"caption\": null,\n                                \"width\": 2880,\n                                \"height\": 1800,\n                                \"formats\": {\n                                    \"thumbnail\": {\n                                        \"name\": \"thumbnail_Screenshot 2023-07-11 at 00.20.06.png\",\n                                        \"hash\": \"thumbnail_Screenshot_2023_07_11_at_00_20_06_860605f6b5\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 245,\n                                        \"height\": 153,\n                                        \"size\": 36.14,\n                                        \"url\": \"/uploads/thumbnail_Screenshot_2023_07_11_at_00_20_06_860605f6b5.png\"\n                                    },\n                                    \"small\": {\n                                        \"name\": \"small_Screenshot 2023-07-11 at 00.20.06.png\",\n                                        \"hash\": \"small_Screenshot_2023_07_11_at_00_20_06_860605f6b5\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 500,\n                                        \"height\": 313,\n                                        \"size\": 101.45,\n                                        \"url\": \"/uploads/small_Screenshot_2023_07_11_at_00_20_06_860605f6b5.png\"\n                                    },\n                                    \"medium\": {\n                                        \"name\": \"medium_Screenshot 2023-07-11 at 00.20.06.png\",\n                                        \"hash\": \"medium_Screenshot_2023_07_11_at_00_20_06_860605f6b5\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 750,\n                                        \"height\": 469,\n                                        \"size\": 177.62,\n                                        \"url\": \"/uploads/medium_Screenshot_2023_07_11_at_00_20_06_860605f6b5.png\"\n                                    },\n                                    \"large\": {\n                                        \"name\": \"large_Screenshot 2023-07-11 at 00.20.06.png\",\n                                        \"hash\": \"large_Screenshot_2023_07_11_at_00_20_06_860605f6b5\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 1000,\n                                        \"height\": 625,\n                                        \"size\": 277.53,\n                                        \"url\": \"/uploads/large_Screenshot_2023_07_11_at_00_20_06_860605f6b5.png\"\n                                    }\n                                },\n                                \"hash\": \"Screenshot_2023_07_11_at_00_20_06_860605f6b5\",\n                                \"ext\": \".png\",\n                                \"mime\": \"image/png\",\n                                \"size\": 244.17,\n                                \"url\": \"/uploads/Screenshot_2023_07_11_at_00_20_06_860605f6b5.png\",\n                                \"previewUrl\": null,\n                                \"provider\": \"local\",\n                                \"provider_metadata\": null,\n                                \"createdAt\": \"2023-07-14T19:10:45.638Z\",\n                                \"updatedAt\": \"2023-07-14T19:10:45.638Z\"\n                            }\n                        }\n                    ]\n                }\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "API order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\" : {\n    \"items\": [\n        {\n            \"id\":1,\n            \"productName\":\"Jam\",\n            \"price\" : 200000,\n            \"qty\": 1\n        },\n        {\"id\":1,\n            \"productName\":\"kacamata\",\n            \"price\" : 100000,\n            \"qty\": 2\n            }\n    ],\n    \"totalPrice\" : 300000,\n    \"DeliveryAddress\" : \"kp. kebon kelapa\",\n    \"CourierName\": \"huzi\",\n    \"shippingCost\": 22000,\n    \"orderStatus\": \"waitingPayment\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "core api ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\" : {\n    \"items\": [\n        {\n            \"id\":1,\n            \"productName\":\"Jam\",\n            \"price\" : 200000,\n            \"qty\": 1\n        },\n        {\"id\":1,\n            \"productName\":\"kacamata\",\n            \"price\" : 100000,\n            \"qty\": 2\n            }\n    ],\n    \"totalPrice\" : 300000,\n    \"DeliveryAddress\" : \"kp. kebon kelapa\",\n    \"CourierName\": \"huzi\",\n    \"shippingCost\": 22000,\n    \"orderStatus\": \"waitingPayment\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "925"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 15:57:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"0b34d386-d5a8-4918-9a8f-4af620599b4b\",\n    \"order_id\": \"14\",\n    \"merchant_id\": \"G621971221\",\n    \"gross_amount\": \"300000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-19 22:57:55\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/0b34d386-d5a8-4918-9a8f-4af620599b4b/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=11945c74-1e39-4d35-8991-9f3a3f6a1787\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/0b34d386-d5a8-4918-9a8f-4af620599b4b/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/0b34d386-d5a8-4918-9a8f-4af620599b4b/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-19 23:12:55\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api payment-callback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n         \"va_numbers\": [\n    {\n      \"va_number\": \"71221986322\",\n      \"bank\": \"bca\"\n    }\n  ],\n  \"transaction_time\": \"2023-07-20 12:43:57\",\n  \"transaction_status\": \"settlement\",\n  \"transaction_id\": \"931fdc17-56d5-4130-b6c8-e2c7522e6661\",\n  \"status_message\": \"midtrans payment notification\",\n  \"status_code\": \"200\",\n  \"signature_key\": \"8a427ee795620bdf04d22596d1892e687d033852f7af5ae6bad9f3d47dfac89546bb0d63d4e03c5c429791e7a2727bd1191871978272f26d42411bd9a63009e5\",\n  \"settlement_time\": \"2023-07-20 12:44:10\",\n  \"payment_type\": \"bank_transfer\",\n  \"payment_amounts\": [\n\n  ],\n  \"order_id\": \"20\",\n  \"merchant_id\": \"G621971221\",\n  \"gross_amount\": \"1800000.00\",\n  \"fraud_status\": \"accept\",\n  \"expiry_time\": \"2023-07-21 12:43:56\",\n  \"currency\": \"IDR\"\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/payment-callbacks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"payment-callbacks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
