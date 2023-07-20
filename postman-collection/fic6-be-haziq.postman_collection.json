@@ -506,7 +506,20 @@
 			"name": "api get product  by  id",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"orders",
+						"1"
+					]
+				}
 			},
 			"response": [
 				{
@@ -1506,7 +1519,110 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n         \"va_numbers\": [\n    {\n      \"va_number\": \"71221986322\",\n      \"bank\": \"bca\"\n    }\n  ],\n  \"transaction_time\": \"2023-07-20 12:43:57\",\n  \"transaction_status\": \"settlement\",\n  \"transaction_id\": \"931fdc17-56d5-4130-b6c8-e2c7522e6661\",\n  \"status_message\": \"midtrans payment notification\",\n  \"status_code\": \"200\",\n  \"signature_key\": \"8a427ee795620bdf04d22596d1892e687d033852f7af5ae6bad9f3d47dfac89546bb0d63d4e03c5c429791e7a2727bd1191871978272f26d42411bd9a63009e5\",\n  \"settlement_time\": \"2023-07-20 12:44:10\",\n  \"payment_type\": \"bank_transfer\",\n  \"payment_amounts\": [\n\n  ],\n  \"order_id\": \"20\",\n  \"merchant_id\": \"G621971221\",\n  \"gross_amount\": \"1800000.00\",\n  \"fraud_status\": \"accept\",\n  \"expiry_time\": \"2023-07-21 12:43:56\",\n  \"currency\": \"IDR\"\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/payment-callbacks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"payment-callbacks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "379"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 08:29:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 20,\n        \"items\": [\n            {\n                \"id\": 1,\n                \"Name\": \"Sepatu Adidas\",\n                \"price\": 900000,\n                \"quantity \": 1\n            },\n            {\n                \"id\": 1,\n                \"Name\": \"Sepatu Adidas\",\n                \"price\": 900000,\n                \"quantity \": 1\n            }\n        ],\n        \"totalPrice\": 1800000,\n        \"DeliveryAddress\": null,\n        \"CourierName\": null,\n        \"shippingCost\": 22000,\n        \"createdAt\": \"2023-07-20T05:43:40.078Z\",\n        \"updatedAt\": \"2023-07-20T08:29:25.057Z\",\n        \"publishedAt\": \"2023-07-20T05:43:40.075Z\",\n        \"orderStatus\": \"Purchased\"\n    }\n}"
+				}
+			]
 		}
 	]
 }
